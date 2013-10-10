@@ -113,8 +113,7 @@ class CGridTestFrame(wx.Frame):
         for i in range(paramGroups):
             url_params = ''
             for j in range(paramNums):
-                if self.data[(i+3,j)]!='':
-                    url_params += ( '&'+paramNameDict[j]+'='+self.data[(i+3,j)])
+                url_params += ( '&'+paramNameDict[j]+'='+self.data[(i+3,j)])
             self.requestList[i] = (url_location,url_params[1:])
         
         self.list.ClearAll()
